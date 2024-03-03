@@ -1,4 +1,20 @@
 # BaekjoonStudy
 
+[solved.ac](https://solved.ac/profile/hyunseong0718)
+
 - 알고리즘 공부 저장소
-- 24.03.01 커밋 시작
+- 24.03.01 기록 시작
+- 노트북 없이 특정 장소에서 푼 문제는 저장소에 없을 수 있음 (폰코딩, 알바중 등)
+
+---
+
+### solved.ac
+
+[![Solved.ac
+프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=hyunseong0718)](https://solved.ac/hyunseong0718)
+
+### 커밋 기록
+
+24.03.03 : 6문제 해결
+
+---
