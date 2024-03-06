@@ -1,5 +1,6 @@
 {
   // 파이썬용 black 포매터 적용, 저장 시 포매터 자동 작동
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "ms-python.black-formatter"
+  "editor.defaultFormatter": "ms-python.black-formatter",
+  "editor.formatOnPaste": true
 }
