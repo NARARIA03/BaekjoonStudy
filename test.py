@@ -1,3 +1,3 @@
-
-num = [1, 2, 2, 2]
-print(max(num))
+queue = [[1, 2]]
+x, y = queue.pop()
+print(x, y)
