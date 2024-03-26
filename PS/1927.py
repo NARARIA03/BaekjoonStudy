@@ -18,13 +18,18 @@ def heap_push(item):
     # while문에서 item이 본인의 부모보다 작다면 -> 부모와 위치를 스왑해서 최소 힙을 유지한다
     cur_idx = len(heap) - 1
     # 0보다 크다는 조건 : root 까지 올라가면, 더 이상 비교할 부모가 없으므로 반복문을 종료해야 함
-    # heap[cur_idx] < heap[cur_idx // 2] : item이 item의 부모보다 작은 경우 (스왑이 필요한 경우)
-    while cur_idx > 0 and heap[cur_idx] < heap[cur_idx // 2]:
+    # heap[cur_idx] < heap[(cur_idx - 1) // 2] : item이 item의 부모보다 작은 경우 (스왑이 필요한 경우)
+
+    # cur_idx의 부모 idx = cur_idx // 2 ?
+    # <- 이렇게 처리하면, left child index는 parent index로 변하겠지만, right child index는 parent index가 아닌 값으로 변해 로직이 꼬임!!
+    # Ex : 0의 자식 1, 2에 대해 ( 1 // 2 == 0 but 2 // 2 == 1)
+    # 만약 // 2를 사용하고 싶다면, pop에서 * 2 + 1이 아닌, * 2를 사용해야 한다.
+    while cur_idx > 0 and heap[cur_idx] < heap[(cur_idx - 1) // 2]:
         tmp = heap[cur_idx]
-        heap[cur_idx] = heap[cur_idx // 2]
-        heap[cur_idx // 2] = tmp
+        heap[cur_idx] = heap[(cur_idx - 1) // 2]
+        heap[(cur_idx - 1) // 2] = tmp
         # 스왑을 진행한 뒤, cur_idx를 부모 idx로 변경해준다. (부모랑 스왑했으니까 item 위치는 당연히 변한다)
-        cur_idx = cur_idx // 2
+        cur_idx = (cur_idx - 1) // 2
 
 
 # 최소 힙에서 root를 Pop하는 함수
@@ -67,7 +72,7 @@ def heap_pop():
             # 자식과 부모를 교환했으면, cur_idx(root로 옮겨진, 마지막에 삽입된 값의 index) 값을 스왑한 자식 노드의 원래 index로 수정해주고
             # 자식의 index는 본인 * 2로 바꿔준다. (이는 이진트리를 배열로 표현하는 과정에서 나온다)
             cur_idx = child_idx
-            child_idx = cur_idx * 2
+            child_idx = cur_idx * 2 + 1
         # 이 else문이 없어서 계속 시간 초과가 발생했었다.
         # 사실 생각해보면, 자식 간 크기 비교는 마쳤는데, 가장 작은 자식(child_idx)보다 부모(cur_idx)가 더 작게 되면, 여기서 스왑을 마쳐야 한다. (버블링이라고 했나 이걸)
         # 근데 이 break가 없으면, 스왑을 하진 않는데, 무한으로 while문이 작동하게 된다. 이래서 시간초과가 발생했던 것이다!!

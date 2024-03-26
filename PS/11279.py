@@ -13,18 +13,18 @@ def maximum_heap_push(e):
     maximum_heap.append(e)
     e_idx = len(maximum_heap) - 1
 
-    while e_idx > 0 and maximum_heap[e_idx // 2] < maximum_heap[e_idx]:
-        tmp = maximum_heap[e_idx // 2]
-        maximum_heap[e_idx // 2] = maximum_heap[e_idx]
+    # Root index를 0으로 삼은 트리에서 부모 노드 index는 (e_idx - 1) // 2와 같이 접근하자!
+    while e_idx > 0 and maximum_heap[(e_idx - 1) // 2] < maximum_heap[e_idx]:
+        tmp = maximum_heap[(e_idx - 1) // 2]
+        maximum_heap[(e_idx - 1) // 2] = maximum_heap[e_idx]
         maximum_heap[e_idx] = tmp
-        e_idx = e_idx // 2
+        e_idx = (e_idx - 1) // 2
     return
 
 
 def maximum_heap_pop():
     if len(maximum_heap) == 0:
         return 0
-    # 원래 heap의 크기가 2일 때도 popleft만 수행하면 된다고 생각햇는데, 그렇지 않은 것 같아서 한 번 1만 popleft 해보겠다
     if len(maximum_heap) == 1:
         return maximum_heap.pop()
 
@@ -47,7 +47,7 @@ def maximum_heap_pop():
             maximum_heap[child_idx] = maximum_heap[parent_idx]
             maximum_heap[parent_idx] = tmp
             parent_idx = child_idx
-            child_idx = parent_idx * 2  # <- 여기가 왜 *2 일까 깊게 고민!
+            child_idx = parent_idx * 2 + 1
         else:
             break
     return return_v
