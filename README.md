@@ -1,11 +1,10 @@
 # BaekjoonStudy
 
-[solved.ac](https://solved.ac/profile/hyunseong0718)
+
 
 - 알고리즘 공부 저장소
 - 24.03.01 기록 시작
-- 노트북 없이 특정 장소에서 푼 문제는 저장소에 없을 수 있음 (폰코딩, 알바중 등)
-
+- [PS 공부 기록 Notion link](https://speckled-piranha-804.notion.site/BaekJoon-3e95ed40c6804dee8856d3a397ffff17?pvs=4)
 ---
 
 ### solved.ac
@@ -41,4 +40,5 @@
 - 24.03.26 : 1문제 해결
 - 24.03.27 : 1문제 해결
 - 24.03.28 : 1문제 해결
+- 24.03.29 : 1문제 해결
 ---
