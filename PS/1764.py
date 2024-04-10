@@ -14,11 +14,11 @@ for _ in range(N):
 for _ in range(M):
     no_see_set.add(sys.stdin.readline().strip())
 
-# 두 집합의 합집합을 계산해 union_set에 저장.
-union_set = no_hear_set & no_see_set
+# 두 집합의 교집합을 계산해 intersection_set에 저장.
+intersection_set = no_hear_set & no_see_set
 
 # 집합의 길이 출력
-sys.stdout.write(str(len(union_set)) + "\n")
+sys.stdout.write(str(len(intersection_set)) + "\n")
 # 집합 내 이름을 사전순으로 정렬해서 출력
-for name in sorted(union_set):
+for name in sorted(intersection_set):
     sys.stdout.write(name + "\n")
