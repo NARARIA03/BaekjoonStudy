@@ -1,10 +1,9 @@
 # BaekjoonStudy
 
-
-
 - 알고리즘 공부 저장소
 - 24.03.01 기록 시작
 - [PS 공부 기록 Notion link](https://speckled-piranha-804.notion.site/BaekJoon-3e95ed40c6804dee8856d3a397ffff17?pvs=4)
+
 ---
 
 ### solved.ac
@@ -13,6 +12,8 @@
 프로필](http://mazassumnida.wtf/api/v2/generate_badge?boj=hyunseong0718)](https://solved.ac/hyunseong0718)
 
 ### 커밋 기록
+
+#### python (legacy)
 
 - 24.03.03: 13문제 해결
 - 24.03.04: 2문제 해결
@@ -73,4 +74,9 @@
 - 24.05.02: 1문제 해결
 - 24.05.03: 1문제 해결
 - 24.05.04: 1문제 해결
+
+#### JS, TS
+
+- 24.06.20: 4문제 해결
+
 ---
